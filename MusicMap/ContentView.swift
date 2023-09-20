@@ -15,12 +15,11 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
         }
+        .onAppear {
+            getAllArtists() { data in
+                print(data)
+            }
+        }
         .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

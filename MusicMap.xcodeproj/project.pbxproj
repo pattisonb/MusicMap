@@ -10,6 +10,8 @@
 		D85321B62ABBA90200E18866 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321B52ABBA90200E18866 /* Artist.swift */; };
 		D85321B82ABBA94000E18866 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321B72ABBA94000E18866 /* Venue.swift */; };
 		D85321BA2ABBA97500E18866 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321B92ABBA97500E18866 /* Performance.swift */; };
+		D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321BC2ABBAAB600E18866 /* NetworkRequests.swift */; };
+		D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D85321BF2ABBAB6900E18866 /* Alamofire */; };
 		D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */; };
 		D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */; };
 		D8D4B5E02ABBA7FC0054723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		D85321B52ABBA90200E18866 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		D85321B72ABBA94000E18866 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		D85321B92ABBA97500E18866 /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
+		D85321BC2ABBAAB600E18866 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		D85321C12ABBAC4F00E18866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8D4B5D82ABBA7FA0054723A /* MusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapApp.swift; sourceTree = "<group>"; };
 		D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D85321BB2ABBAA9200E18866 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				D85321BC2ABBAAB600E18866 /* NetworkRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		D8D4B5CF2ABBA7FA0054723A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,8 @@
 		D8D4B5DA2ABBA7FA0054723A /* MusicMap */ = {
 			isa = PBXGroup;
 			children = (
+				D85321C12ABBAC4F00E18866 /* Info.plist */,
+				D85321BB2ABBAA9200E18866 /* Requests */,
 				D85321B42ABBA8CB00E18866 /* Models */,
 				D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */,
 				D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */,
@@ -162,6 +177,9 @@
 			dependencies = (
 			);
 			name = MusicMap;
+			packageProductDependencies = (
+				D85321BF2ABBAB6900E18866 /* Alamofire */,
+			);
 			productName = MusicMap;
 			productReference = D8D4B5D82ABBA7FA0054723A /* MusicMap.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +252,9 @@
 				Base,
 			);
 			mainGroup = D8D4B5CF2ABBA7FA0054723A;
+			packageReferences = (
+				D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D8D4B5D92ABBA7FA0054723A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,6 +299,7 @@
 			files = (
 				D85321B62ABBA90200E18866 /* Artist.swift in Sources */,
 				D85321BA2ABBA97500E18866 /* Performance.swift in Sources */,
+				D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */,
 				D85321B82ABBA94000E18866 /* Venue.swift in Sources */,
 				D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */,
 				D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */,
@@ -439,6 +461,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicMap/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -477,6 +500,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicMap/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -632,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D85321BF2ABBAB6900E18866 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8D4B5D02ABBA7FA0054723A /* Project object */;
 }

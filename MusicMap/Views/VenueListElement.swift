@@ -49,6 +49,11 @@ struct VenueListElement: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
+                if !showDate {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.blue)
+                        .padding(.trailing, 4)
+                }
             }
         }
         .frame(maxWidth: .infinity)
@@ -56,5 +61,10 @@ struct VenueListElement: View {
         .background(Color.white)
         .cornerRadius(8)
         .shadow(radius: 4)
+        .background(
+            !showDate ?
+            NavigationLink("", destination: VenueView(venue: venue)).opacity(0) :
+                nil
+        )
     }
 }

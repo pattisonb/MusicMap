@@ -11,6 +11,9 @@ import CachedAsyncImage
 struct ArtistListElement: View {
     var artist: Artist
     
+    var showDate = false
+    var date: Date = Date.now
+    
     var body: some View {
         HStack(spacing: 12) {
             if let artistName = artist.name {
@@ -38,24 +41,36 @@ struct ArtistListElement: View {
                         .minimumScaleFactor(0.5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.trailing, 8)
-                    Text(artist.genre!)
-                        .fontWeight(.thin)
-                        .foregroundColor(.secondary)
-                        .padding(.trailing, 8)
+                    if showDate {
+                        Text(formatDate(date: date))
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    else {
+                        Text(artist.genre!)
+                            .fontWeight(.thin)
+                            .foregroundColor(.secondary)
+                            .padding(.trailing, 8)
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
                 
-                
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.blue)
-                    .padding(.trailing, 4)
+                if !showDate {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.blue)
+                        .padding(.trailing, 4)
+                }
             }
         }
         .background(Color.white)
         .cornerRadius(8)
         .shadow(radius: 4)
         .padding([.horizontal], 6)
-        .background(NavigationLink("", destination: ArtistView(artist: artist)).opacity(0))
+        .background(
+            !showDate ?
+            NavigationLink("", destination: ArtistView(artist: artist)).opacity(0) :
+                nil
+        )
     }
 }

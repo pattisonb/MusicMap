@@ -16,6 +16,7 @@ struct ArtistListView: View {
             List {
                 ForEach(artists, id: \.id) { artist in
                     ArtistListElement(artist: artist)
+                        .listRowSeparator(.hidden)
                 }
             }
         }
@@ -23,6 +24,9 @@ struct ArtistListView: View {
             getAllArtists() { data in
                 if let data = data {
                     artists = data
+                    artists.sort { (artist1, artist2) -> Bool in
+                        return artist1.name?.localizedCaseInsensitiveCompare(artist2.name ?? "") == .orderedAscending
+                    }
                 }
             }
         }

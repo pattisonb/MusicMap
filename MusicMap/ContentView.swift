@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedList: SelectedList = .artist
     var body: some View {
-        ZStack {
-            VenueListView()
+        VStack {
+            switch selectedList {
+            case .artist:
+                ArtistListView(selectedList: $selectedList)
+            case .venue:
+                VenueListView(selectedList: $selectedList)
+            }
         }
-        .background(Color("background"))
         .padding()
     }
 }

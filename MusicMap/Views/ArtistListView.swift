@@ -11,8 +11,11 @@ struct ArtistListView: View {
     
     @State var artists: [Artist] = []
     
+    @Binding var selectedList: SelectedList
+    
     var body: some View {
-        ZStack {
+        VStack {
+            ListSelectorView(selectedList: $selectedList)
             List {
                 ForEach(artists, id: \.id) { artist in
                     ArtistListElement(artist: artist)

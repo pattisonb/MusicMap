@@ -9,9 +9,11 @@ import SwiftUI
 
 struct VenueListView: View {
     @State var venues: [Venue] = []
+    @Binding var selectedList: SelectedList
     
     var body: some View {
-        ZStack {
+        VStack {
+            ListSelectorView(selectedList: $selectedList)
             List {
                 ForEach(venues, id: \.id) { venue in
                     VenueListElement(venue: venue)

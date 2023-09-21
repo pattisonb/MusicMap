@@ -7,14 +7,36 @@
 
 import SwiftUI
 
-struct ListSelectorView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+enum SelectedList {
+    case artist
+    case venue
 }
 
-struct ListSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListSelectorView()
+struct ListSelectorView: View {
+    
+    @Binding var selectedList: SelectedList
+    
+    var body: some View {
+        HStack {
+            Button(action: {
+                selectedList = .artist
+            }) {
+                Text("Artists")
+                    .padding()
+                    .background(selectedList == .artist ? Color.blue : Color.clear)
+                    .foregroundColor(selectedList == .artist ? Color.white : Color.blue)
+                    .cornerRadius(8)
+            }
+            
+            Button(action: {
+                selectedList = .venue
+            }) {
+                Text("Venues")
+                    .padding()
+                    .background(selectedList == .venue ? Color.blue : Color.clear)
+                    .foregroundColor(selectedList == .venue ? Color.white : Color.blue)
+                    .cornerRadius(8)
+            }
+        }
     }
 }

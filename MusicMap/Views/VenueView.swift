@@ -25,7 +25,7 @@ struct VenueView: View {
                         image
                             .resizable()
                             .frame(maxHeight: 250)
-                            .blur(radius: 5)
+                            .blur(radius: 10)
                     } placeholder: {
                         ProgressView()
                     }
@@ -61,7 +61,7 @@ struct VenueView: View {
             let todayString = dateFormatter.string(from: today)
             let twoWeeksString = dateFormatter.string(from: twoWeeks)
             
-            getVenuePerformances(venueId: venue.id!, fromDate: todayString, toDate: twoWeeksString) { data in
+            NetworkRequests().getVenuePerformances(venueId: venue.id!, fromDate: todayString, toDate: twoWeeksString) { data in
                 if let data = data {
                     performances = data
                     performances.sort { $0.date! < $1.date! }

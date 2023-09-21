@@ -11,11 +11,9 @@ struct ArtistListView: View {
     
     @State var artists: [Artist] = []
     
-    @Binding var selectedList: SelectedList
-    
     var body: some View {
         VStack {
-            ListSelectorView(selectedList: $selectedList)
+            ListSelectorView()
             List {
                 ForEach(artists, id: \.id) { artist in
                         ArtistListElement(artist: artist)
@@ -25,7 +23,7 @@ struct ArtistListView: View {
             .listStyle(PlainListStyle())
         }
         .onAppear {
-            getAllArtists() { data in
+            NetworkRequests().getAllArtists() { data in
                 if let data = data {
                     artists = data
                     artists.sort { (artist1, artist2) -> Bool in

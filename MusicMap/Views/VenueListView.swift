@@ -9,11 +9,9 @@ import SwiftUI
 
 struct VenueListView: View {
     @State var venues: [Venue] = []
-    @Binding var selectedList: SelectedList
-    
     var body: some View {
         VStack {
-            ListSelectorView(selectedList: $selectedList)
+            ListSelectorView()
             List {
                 ForEach(venues, id: \.id) { venue in
                     VenueListElement(venue: venue, showDate: false)
@@ -22,7 +20,7 @@ struct VenueListView: View {
             
         }
         .onAppear {
-            getAllVenues() { data in
+            NetworkRequests().getAllVenues() { data in
                 if let data = data {
                     venues = data.sorted { venue1, venue2 in
                         return venue1.sortId! < venue2.sortId!

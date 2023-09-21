@@ -24,6 +24,7 @@
 		D85321D82ABCEC7700E18866 /* IntExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D72ABCEC7700E18866 /* IntExtenstions.swift */; };
 		D85321DA2ABCEC9A00E18866 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D92ABCEC9A00E18866 /* Date.swift */; };
 		D85321DC2ABCF02400E18866 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321DB2ABCF02400E18866 /* VenueView.swift */; };
+		D85321DF2ABCF36E00E18866 /* MusicMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321DE2ABCF36E00E18866 /* MusicMapVM.swift */; };
 		D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */; };
 		D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */; };
 		D8D4B5E02ABBA7FC0054723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		D85321D72ABCEC7700E18866 /* IntExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtenstions.swift; sourceTree = "<group>"; };
 		D85321D92ABCEC9A00E18866 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D85321DB2ABCF02400E18866 /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
+		D85321DE2ABCF36E00E18866 /* MusicMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapVM.swift; sourceTree = "<group>"; };
 		D8D4B5D82ABBA7FA0054723A /* MusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapApp.swift; sourceTree = "<group>"; };
 		D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D85321DD2ABCF36200E18866 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D85321DE2ABCF36E00E18866 /* MusicMapVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D8D4B5CF2ABBA7FA0054723A = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 				D85321C12ABBAC4F00E18866 /* Info.plist */,
 				D85321B42ABBA8CB00E18866 /* Models */,
 				D85321C62ABCDC4000E18866 /* Views */,
+				D85321DD2ABCF36200E18866 /* ViewModels */,
 				D85321BB2ABBAA9200E18866 /* Requests */,
 				D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */,
 				D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */,
@@ -359,6 +370,7 @@
 				D85321D32ABCE47300E18866 /* VenueListElement.swift in Sources */,
 				D85321C52ABCD9F800E18866 /* ArtistPerformance.swift in Sources */,
 				D85321DC2ABCF02400E18866 /* VenueView.swift in Sources */,
+				D85321DF2ABCF36E00E18866 /* MusicMapVM.swift in Sources */,
 				D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */,
 				D85321D12ABCE3AB00E18866 /* VenueListView.swift in Sources */,
 				D85321B82ABBA94000E18866 /* Venue.swift in Sources */,

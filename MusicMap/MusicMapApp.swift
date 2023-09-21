@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MusicMapApp: App {
+    
+    @StateObject var musicMapVM = MusicMapVM()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(musicMapVM)
         }
     }
 }

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedList: SelectedList = .artist
+    @EnvironmentObject var musicMapVM: MusicMapVM
     var body: some View {
         NavigationView {
             VStack {
-                switch selectedList {
+                switch musicMapVM.selectedList {
                 case .artist:
-                    ArtistListView(selectedList: $selectedList)
+                    ArtistListView()
                 case .venue:
-                    VenueListView(selectedList: $selectedList)
+                    VenueListView()
                 }
             }
             .padding()

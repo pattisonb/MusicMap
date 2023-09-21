@@ -61,7 +61,7 @@ struct ArtistView: View {
             let todayString = dateFormatter.string(from: today)
             let twoWeeksString = dateFormatter.string(from: twoWeeks)
             
-            getArtistPerformances(artistId: artist.id!, fromDate: todayString, toDate: twoWeeksString) { data in
+            NetworkRequests().getArtistPerformances(artistId: artist.id!, fromDate: todayString, toDate: twoWeeksString) { data in
                 if let data = data {
                     performances = data
                     performances.sort { $0.date! < $1.date! }

@@ -16,7 +16,7 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .onAppear {
-            getAllArtists() { data in
+            getAllPerformances() { data in
                 print(data)
             }
         }

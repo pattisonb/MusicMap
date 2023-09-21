@@ -10,6 +10,6 @@ import Foundation
 
 struct Venue: Codable {
     let id: Int?
-    let name: Int?
+    let name: String?
     let sortId: Int?
 }

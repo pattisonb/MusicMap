@@ -34,11 +34,51 @@ func getAllVenues(completion: @escaping ([Venue]?) -> ()) {
     }
 }
 
-func getAllPerformances(completion: @escaping ([Performance]?) -> ()) {
-    AF.request("\(apiUrl)/performances?from=2023-07-01&to=2023-07-14", method: .get, parameters: nil).validate(statusCode: 200 ..< 299).responseData { response in
+func getVenuePerformances(venueId: Int, fromDate: String?, toDate: String?, completion: @escaping ([VenuePerformance]?) -> ()) {
+    var adjustedURl = "\(apiUrl)/venues/\(venueId)/performances"
+    if let from = fromDate {
+        adjustedURl += "?from=\(from)"
+    }
+    if let to = toDate {
+        if fromDate != nil {
+            adjustedURl += "&"
+        }
+        else {
+            adjustedURl += "?"
+        }
+        adjustedURl += "to=\(to)"
+    }
+    print(adjustedURl)
+    AF.request(adjustedURl, method: .get, parameters: nil).validate(statusCode: 200 ..< 299).responseData { response in
         switch response.result {
         case .success(let data):
-            let jsonData = try? JSONDecoder().decode([Performance].self, from: data)
+            let jsonData = try? JSONDecoder().decode([VenuePerformance].self, from: data)
+            completion(jsonData)
+        case .failure(let error):
+            print(error)
+        }
+    }
+}
+
+func getArtistPerformances(artistId: Int, fromDate: String?, toDate: String?, completion: @escaping ([ArtistPerformance]?) -> ()) {
+    var adjustedURl = "\(apiUrl)/artists/\(artistId)/performances"
+    if let from = fromDate {
+        adjustedURl += "?from=\(from)"
+    }
+    if let to = toDate {
+        if fromDate != nil {
+            adjustedURl += "&"
+        }
+        else {
+            adjustedURl += "?"
+        }
+        adjustedURl += "to=\(to)"
+    }
+    print(adjustedURl)
+    AF.request(adjustedURl, method: .get, parameters: nil).validate(statusCode: 200 ..< 299).responseData { response in
+        switch response.result {
+        case .success(let data):
+            let jsonData = try? JSONDecoder().decode([ArtistPerformance].self, from: data)
             completion(jsonData)
         case .failure(let error):
             print(error)

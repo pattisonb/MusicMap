@@ -11,6 +11,9 @@ import CachedAsyncImage
 struct VenueListElement: View {
     var venue: Venue
     
+    var showDate = false
+    var date: Date = Date.now
+    
     var body: some View {
         HStack(spacing: 12) {
             if let venueName = venue.name {
@@ -30,13 +33,19 @@ struct VenueListElement: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(venueName)
+                    Text("\(showDate ? "@ " : "")\(venueName)")
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.trailing, 8)
+                    
+                    if showDate {
+                        Text(formatDate(date: date))
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)

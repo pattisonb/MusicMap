@@ -24,6 +24,7 @@ struct ArtistListElement: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 80, height: 80)
                             .cornerRadius(8)
+                            .padding(4)
                     } placeholder: {
                         ProgressView()
                     }
@@ -44,12 +45,17 @@ struct ArtistListElement: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
+                
+                
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.blue)
+                    .padding(.trailing, 4)
             }
         }
-        .frame(maxWidth: .infinity)
-        .padding(8)
         .background(Color.white)
         .cornerRadius(8)
         .shadow(radius: 4)
+        .padding([.horizontal], 6)
+        .background(NavigationLink("", destination: ArtistView(artist: artist)).opacity(0))
     }
 }

@@ -10,14 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedList: SelectedList = .artist
     var body: some View {
-        VStack {
-            switch selectedList {
-            case .artist:
-                ArtistListView(selectedList: $selectedList)
-            case .venue:
-                VenueListView(selectedList: $selectedList)
+        NavigationView {
+            VStack {
+                switch selectedList {
+                case .artist:
+                    ArtistListView(selectedList: $selectedList)
+                case .venue:
+                    VenueListView(selectedList: $selectedList)
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }

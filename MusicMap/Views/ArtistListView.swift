@@ -18,10 +18,11 @@ struct ArtistListView: View {
             ListSelectorView(selectedList: $selectedList)
             List {
                 ForEach(artists, id: \.id) { artist in
-                    ArtistListElement(artist: artist)
-                        .listRowSeparator(.hidden)
+                        ArtistListElement(artist: artist)
+                            .listRowSeparator(.hidden)
                 }
             }
+            .listStyle(PlainListStyle())
         }
         .onAppear {
             getAllArtists() { data in

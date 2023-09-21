@@ -20,6 +20,9 @@
 		D85321CF2ABCE39E00E18866 /* ListSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321CE2ABCE39E00E18866 /* ListSelectorView.swift */; };
 		D85321D12ABCE3AB00E18866 /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D02ABCE3AB00E18866 /* VenueListView.swift */; };
 		D85321D32ABCE47300E18866 /* VenueListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D22ABCE47300E18866 /* VenueListElement.swift */; };
+		D85321D52ABCE79200E18866 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D42ABCE79200E18866 /* ArtistView.swift */; };
+		D85321D82ABCEC7700E18866 /* IntExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D72ABCEC7700E18866 /* IntExtenstions.swift */; };
+		D85321DA2ABCEC9A00E18866 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D92ABCEC9A00E18866 /* Date.swift */; };
 		D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */; };
 		D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */; };
 		D8D4B5E02ABBA7FC0054723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		D85321CE2ABCE39E00E18866 /* ListSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectorView.swift; sourceTree = "<group>"; };
 		D85321D02ABCE3AB00E18866 /* VenueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListView.swift; sourceTree = "<group>"; };
 		D85321D22ABCE47300E18866 /* VenueListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListElement.swift; sourceTree = "<group>"; };
+		D85321D42ABCE79200E18866 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
+		D85321D72ABCEC7700E18866 /* IntExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtenstions.swift; sourceTree = "<group>"; };
+		D85321D92ABCEC9A00E18866 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D8D4B5D82ABBA7FA0054723A /* MusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapApp.swift; sourceTree = "<group>"; };
 		D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,8 +133,18 @@
 				D85321CE2ABCE39E00E18866 /* ListSelectorView.swift */,
 				D85321D02ABCE3AB00E18866 /* VenueListView.swift */,
 				D85321D22ABCE47300E18866 /* VenueListElement.swift */,
+				D85321D42ABCE79200E18866 /* ArtistView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D85321D62ABCEC6500E18866 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D85321D72ABCEC7700E18866 /* IntExtenstions.swift */,
+				D85321D92ABCEC9A00E18866 /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D8D4B5CF2ABBA7FA0054723A = {
@@ -154,6 +170,7 @@
 		D8D4B5DA2ABBA7FA0054723A /* MusicMap */ = {
 			isa = PBXGroup;
 			children = (
+				D85321D62ABCEC6500E18866 /* Extensions */,
 				D85321C12ABBAC4F00E18866 /* Info.plist */,
 				D85321B42ABBA8CB00E18866 /* Models */,
 				D85321C62ABCDC4000E18866 /* Views */,
@@ -333,12 +350,15 @@
 				D85321C32ABCD86000E18866 /* VenuePerformance.swift in Sources */,
 				D85321B62ABBA90200E18866 /* Artist.swift in Sources */,
 				D85321BA2ABBA97500E18866 /* Performance.swift in Sources */,
+				D85321DA2ABCEC9A00E18866 /* Date.swift in Sources */,
 				D85321CA2ABCDD9200E18866 /* ArtistListElement.swift in Sources */,
+				D85321D82ABCEC7700E18866 /* IntExtenstions.swift in Sources */,
 				D85321D32ABCE47300E18866 /* VenueListElement.swift in Sources */,
 				D85321C52ABCD9F800E18866 /* ArtistPerformance.swift in Sources */,
 				D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */,
 				D85321D12ABCE3AB00E18866 /* VenueListView.swift in Sources */,
 				D85321B82ABBA94000E18866 /* Venue.swift in Sources */,
+				D85321D52ABCE79200E18866 /* ArtistView.swift in Sources */,
 				D85321C82ABCDC6300E18866 /* ArtistListView.swift in Sources */,
 				D85321CF2ABCE39E00E18866 /* ListSelectorView.swift in Sources */,
 				D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */,

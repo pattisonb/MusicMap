@@ -16,9 +16,10 @@ struct VenueListView: View {
             ListSelectorView(selectedList: $selectedList)
             List {
                 ForEach(venues, id: \.id) { venue in
-                    VenueListElement(venue: venue)
+                    VenueListElement(venue: venue, showDate: false)
                 }
             }
+            
         }
         .onAppear {
             getAllVenues() { data in

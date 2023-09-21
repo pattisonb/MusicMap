@@ -14,6 +14,9 @@
 		D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D85321BF2ABBAB6900E18866 /* Alamofire */; };
 		D85321C32ABCD86000E18866 /* VenuePerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C22ABCD86000E18866 /* VenuePerformance.swift */; };
 		D85321C52ABCD9F800E18866 /* ArtistPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C42ABCD9F700E18866 /* ArtistPerformance.swift */; };
+		D85321C82ABCDC6300E18866 /* ArtistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C72ABCDC6300E18866 /* ArtistListView.swift */; };
+		D85321CA2ABCDD9200E18866 /* ArtistListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C92ABCDD9200E18866 /* ArtistListElement.swift */; };
+		D85321CD2ABCDDEE00E18866 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */; };
 		D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */; };
 		D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */; };
 		D8D4B5E02ABBA7FC0054723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */; };
@@ -48,6 +51,8 @@
 		D85321C12ABBAC4F00E18866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D85321C22ABCD86000E18866 /* VenuePerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePerformance.swift; sourceTree = "<group>"; };
 		D85321C42ABCD9F700E18866 /* ArtistPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPerformance.swift; sourceTree = "<group>"; };
+		D85321C72ABCDC6300E18866 /* ArtistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListView.swift; sourceTree = "<group>"; };
+		D85321C92ABCDD9200E18866 /* ArtistListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListElement.swift; sourceTree = "<group>"; };
 		D8D4B5D82ABBA7FA0054723A /* MusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapApp.swift; sourceTree = "<group>"; };
 		D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */,
+				D85321CD2ABCDDEE00E18866 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +113,15 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		D85321C62ABCDC4000E18866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D85321C72ABCDC6300E18866 /* ArtistListView.swift */,
+				D85321C92ABCDD9200E18866 /* ArtistListElement.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D8D4B5CF2ABBA7FA0054723A = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				D85321C12ABBAC4F00E18866 /* Info.plist */,
-				D85321BB2ABBAA9200E18866 /* Requests */,
 				D85321B42ABBA8CB00E18866 /* Models */,
+				D85321C62ABCDC4000E18866 /* Views */,
+				D85321BB2ABBAA9200E18866 /* Requests */,
 				D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */,
 				D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */,
 				D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */,
@@ -185,6 +201,7 @@
 			name = MusicMap;
 			packageProductDependencies = (
 				D85321BF2ABBAB6900E18866 /* Alamofire */,
+				D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */,
 			);
 			productName = MusicMap;
 			productReference = D8D4B5D82ABBA7FA0054723A /* MusicMap.app */;
@@ -260,6 +277,7 @@
 			mainGroup = D8D4B5CF2ABBA7FA0054723A;
 			packageReferences = (
 				D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = D8D4B5D92ABBA7FA0054723A /* Products */;
 			projectDirPath = "";
@@ -306,9 +324,11 @@
 				D85321C32ABCD86000E18866 /* VenuePerformance.swift in Sources */,
 				D85321B62ABBA90200E18866 /* Artist.swift in Sources */,
 				D85321BA2ABBA97500E18866 /* Performance.swift in Sources */,
+				D85321CA2ABCDD9200E18866 /* ArtistListElement.swift in Sources */,
 				D85321C52ABCD9F800E18866 /* ArtistPerformance.swift in Sources */,
 				D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */,
 				D85321B82ABBA94000E18866 /* Venue.swift in Sources */,
+				D85321C82ABCDC6300E18866 /* ArtistListView.swift in Sources */,
 				D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */,
 				D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */,
 			);
@@ -674,6 +694,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -681,6 +709,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

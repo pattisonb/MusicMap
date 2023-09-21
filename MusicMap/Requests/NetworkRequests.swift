@@ -50,7 +50,6 @@ func getArtistPerformances(artistId: Int, fromDate: String?, toDate: String?, co
         }
         adjustedURl += "to=\(to)"
     }
-    print(adjustedURl)
     AF.request(adjustedURl, method: .get, parameters: nil).validate(statusCode: 200 ..< 299).responseData { response in
         switch response.result {
         case .success(let data):
@@ -102,7 +101,6 @@ func getVenuePerformances(venueId: Int, fromDate: String?, toDate: String?, comp
         }
         adjustedURl += "to=\(to)"
     }
-    print(adjustedURl)
     AF.request(adjustedURl, method: .get, parameters: nil).validate(statusCode: 200 ..< 299).responseData { response in
         switch response.result {
         case .success(let data):

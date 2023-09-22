@@ -29,6 +29,7 @@ struct ArtistView: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .accessibilityIdentifier("artistHeaderImage")
                 }
                 Text(artist.name!)
                     .font(.largeTitle)
@@ -45,6 +46,7 @@ struct ArtistView: View {
             List {
                 ForEach(performances, id: \.id) { performance in
                     VenueListElement(venue: performance.venue!, showDate: true, date: performance.date!)
+                        .listRowSeparator(.hidden)
                 }
             }
             .listStyle(PlainListStyle())

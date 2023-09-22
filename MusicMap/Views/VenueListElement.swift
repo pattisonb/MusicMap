@@ -30,21 +30,24 @@ struct VenueListElement: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .accessibilityIdentifier("venuePhoto")
                 }
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text("\(showDate ? "@ " : "")\(venueName)")
                         .fontWeight(.bold)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.black)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.trailing, 8)
+                        .accessibilityIdentifier("venueName")
                     
                     if showDate {
                         Text(formatDate(date: date))
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.gray)
+                            .accessibilityIdentifier("venueDate")
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -63,7 +66,9 @@ struct VenueListElement: View {
         .shadow(radius: 4)
         .background(
             !showDate ?
-            NavigationLink("", destination: VenueView(venue: venue)).opacity(0) :
+            NavigationLink("", destination: VenueView(venue: venue))
+                .opacity(0)
+                .accessibilityIdentifier("venueLink"):
                 nil
         )
     }

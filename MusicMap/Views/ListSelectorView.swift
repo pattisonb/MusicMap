@@ -22,6 +22,7 @@ struct ListSelectorView: View {
                     .foregroundColor(musicMapVM.selectedList == .artist ? Color.white : Color.blue)
                     .cornerRadius(8)
             }
+            .accessibilityIdentifier("artistsButton")
             
             Button(action: {
                 musicMapVM.selectedList = .venue
@@ -32,6 +33,7 @@ struct ListSelectorView: View {
                     .foregroundColor(musicMapVM.selectedList == .venue ? Color.white : Color.blue)
                     .cornerRadius(8)
             }
+            .accessibilityIdentifier("venuesButton")
         }
     }
 }

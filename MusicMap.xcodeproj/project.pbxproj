@@ -11,12 +11,10 @@
 		D85321B82ABBA94000E18866 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321B72ABBA94000E18866 /* Venue.swift */; };
 		D85321BA2ABBA97500E18866 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321B92ABBA97500E18866 /* Performance.swift */; };
 		D85321BD2ABBAAB600E18866 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321BC2ABBAAB600E18866 /* NetworkRequests.swift */; };
-		D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D85321BF2ABBAB6900E18866 /* Alamofire */; };
 		D85321C32ABCD86000E18866 /* VenuePerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C22ABCD86000E18866 /* VenuePerformance.swift */; };
 		D85321C52ABCD9F800E18866 /* ArtistPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C42ABCD9F700E18866 /* ArtistPerformance.swift */; };
 		D85321C82ABCDC6300E18866 /* ArtistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C72ABCDC6300E18866 /* ArtistListView.swift */; };
 		D85321CA2ABCDD9200E18866 /* ArtistListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321C92ABCDD9200E18866 /* ArtistListElement.swift */; };
-		D85321CD2ABCDDEE00E18866 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */; };
 		D85321CF2ABCE39E00E18866 /* ListSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321CE2ABCE39E00E18866 /* ListSelectorView.swift */; };
 		D85321D12ABCE3AB00E18866 /* VenueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D02ABCE3AB00E18866 /* VenueListView.swift */; };
 		D85321D32ABCE47300E18866 /* VenueListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D22ABCE47300E18866 /* VenueListElement.swift */; };
@@ -25,6 +23,9 @@
 		D85321DA2ABCEC9A00E18866 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321D92ABCEC9A00E18866 /* Date.swift */; };
 		D85321DC2ABCF02400E18866 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321DB2ABCF02400E18866 /* VenueView.swift */; };
 		D85321DF2ABCF36E00E18866 /* MusicMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85321DE2ABCF36E00E18866 /* MusicMapVM.swift */; };
+		D85322162ABCF8DA00E18866 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D85322152ABCF8DA00E18866 /* Alamofire */; };
+		D85322192ABCF8E300E18866 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D85322182ABCF8E300E18866 /* CachedAsyncImage */; };
+		D853221A2ABD07E300E18866 /* MusicMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5F72ABBA7FC0054723A /* MusicMapUITests.swift */; };
 		D8D4B5DC2ABBA7FA0054723A /* MusicMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DB2ABBA7FA0054723A /* MusicMapApp.swift */; };
 		D8D4B5DE2ABBA7FA0054723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B5DD2ABBA7FA0054723A /* ContentView.swift */; };
 		D8D4B5E02ABBA7FC0054723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D4B5DF2ABBA7FC0054723A /* Assets.xcassets */; };
@@ -87,8 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85321C02ABBAB6900E18866 /* Alamofire in Frameworks */,
-				D85321CD2ABCDDEE00E18866 /* CachedAsyncImage in Frameworks */,
+				D85322162ABCF8DA00E18866 /* Alamofire in Frameworks */,
+				D85322192ABCF8E300E18866 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +241,8 @@
 			);
 			name = MusicMap;
 			packageProductDependencies = (
-				D85321BF2ABBAB6900E18866 /* Alamofire */,
-				D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */,
+				D85322152ABCF8DA00E18866 /* Alamofire */,
+				D85322182ABCF8E300E18866 /* CachedAsyncImage */,
 			);
 			productName = MusicMap;
 			productReference = D8D4B5D82ABBA7FA0054723A /* MusicMap.app */;
@@ -316,8 +317,8 @@
 			);
 			mainGroup = D8D4B5CF2ABBA7FA0054723A;
 			packageReferences = (
-				D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				D85322142ABCF8DA00E18866 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D85322172ABCF8E300E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = D8D4B5D92ABBA7FA0054723A /* Products */;
 			projectDirPath = "";
@@ -386,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D853221A2ABD07E300E18866 /* MusicMapUITests.swift in Sources */,
 				D8D4B5EE2ABBA7FC0054723A /* MusicMapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,8 +548,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -585,8 +587,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -734,7 +736,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		D85322142ABCF8DA00E18866 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -742,7 +744,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+		D85322172ABCF8E300E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
 			requirement = {
@@ -753,14 +755,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D85321BF2ABBAB6900E18866 /* Alamofire */ = {
+		D85322152ABCF8DA00E18866 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D85321BE2ABBAB6800E18866 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = D85322142ABCF8DA00E18866 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		D85321CC2ABCDDEE00E18866 /* CachedAsyncImage */ = {
+		D85322182ABCF8E300E18866 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D85321CB2ABCDDEE00E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			package = D85322172ABCF8E300E18866 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */

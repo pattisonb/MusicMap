@@ -15,8 +15,10 @@ struct VenueListView: View {
             List {
                 ForEach(venues, id: \.id) { venue in
                     VenueListElement(venue: venue, showDate: false)
+                        .listRowSeparator(.hidden)
                 }
             }
+            .listStyle(PlainListStyle())
             
         }
         .onAppear {

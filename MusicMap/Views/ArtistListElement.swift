@@ -31,26 +31,30 @@ struct ArtistListElement: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .accessibilityIdentifier("artistPhoto")
                 }
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(artistName)
                         .fontWeight(.bold)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.black)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.trailing, 8)
+                        .accessibilityIdentifier("artistName")
                     if showDate {
                         Text(formatDate(date: date))
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.gray)
+                            .accessibilityIdentifier("artistDate")
                     }
                     else {
                         Text(artist.genre!)
                             .fontWeight(.thin)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.gray)
                             .padding(.trailing, 8)
+                            .accessibilityIdentifier("artistGenre")
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -69,7 +73,9 @@ struct ArtistListElement: View {
         .padding([.horizontal], 6)
         .background(
             !showDate ?
-            NavigationLink("", destination: ArtistView(artist: artist)).opacity(0) :
+            NavigationLink("", destination: ArtistView(artist: artist))
+                .opacity(0)
+                .accessibilityIdentifier("artistLink"):
                 nil
         )
     }
